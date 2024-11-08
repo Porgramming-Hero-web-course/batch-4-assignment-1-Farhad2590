@@ -6,39 +6,16 @@ Any developer working with TypeScript needs to be able to handle asynchronous ac
 
 In JavaScript and TypeScript, callbacks and promises have long been the most common techniques for managing asynchronous actions. These methods, however, can quickly result in what is known as "callback hell" or the "promise pyramid of doom."
 
-** Callback Hell : ** Having nested callbacks can lead to callback hell, which makes the code hard to understand, maintain, and debug. When working with complex asynchronous programs that need the completion of multiple roles, this issue is very common.
+**Callback Hell :** Having nested callbacks can lead to callback hell, which makes the code hard to understand, maintain, and debug. When working with complex asynchronous programs that need the completion of multiple roles, this issue is very common.
 <div align="center">
 <img src="./images/callBackHell.png" alt="Alt text" width="800" height="400" >
 </div>
 
-__Promise Pyramid : __ Promises provide a more organized method of managing asynchronous actions, which reduces the problem of callback hell. The `.then()` and `.catch()` methods allow you to connect promises together rather than nesting callbacks. However, the promise chain may become equally difficult to handle as callback hell as the number of asynchronous actions increases.
+**Promise Pyramid :** Promises provide a more organized method of managing asynchronous actions, which reduces the problem of callback hell. The `.then()` and `.catch()` methods allow you to connect promises together rather than nesting callbacks. However, the promise chain may become equally difficult to handle as callback hell as the number of asynchronous actions increases.
 
-<!-- ```typescript
-// Callback Hell
-doSomething((a) => {
-  doSomethingElse(a, (b) => {
-    doThirdThing(b, (c) => {
-      doFourthThing(c, (d) => {
-        // Do something with result
-      });
-    });
-  });
-}); -->
-
-
-
-// Promise Pyramid of Doom
-doSomething()
-  .then(doSomethingElse)
-  .then(doThirdThing)
-  .then(doFourthThing)
-  .then((result) => {
-    // Do something with result
-  })
-  .catch((error) => {
-    // Handle error
-  });
-```
+<div align="center">
+<img src="./images/promisePyramid.png" alt="Alt text" width="800" height="400" >
+</div>
 
 ### The Power of async/await
 
@@ -46,19 +23,9 @@ The introduction of the `async/await` syntax in TypeScript (and JavaScript) has 
 
 Here's an example of how you can use `async/await` to simplify the previous code:
 
-```typescript
-async function handleAsyncOperations() {
-  try {
-    const a = await doSomething();
-    const b = await doSomethingElse(a);
-    const c = await doThirdThing(b);
-    const d = await doFourthThing(c);
-    // Do something with result
-  } catch (error) {
-    // Handle error
-  }
-}
-```
+<div align="center">
+<img src="./images/promisePyramid.png" alt="Alt text" width="800" height="400" >
+</div>
 
 In this example, the `async/await` syntax allows us to write the asynchronous code in a linear, sequential manner, without the need for complicated promise chains or nested callbacks. The `await` keyword pauses the execution of the function until the asynchronous operation is completed, making the code much more readable and easier to understand.
 
