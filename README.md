@@ -6,12 +6,12 @@ Any developer working with TypeScript needs to be able to handle asynchronous ac
 
 In JavaScript and TypeScript, callbacks and promises have long been the most common techniques for managing asynchronous actions. These methods, however, can quickly result in what is known as "callback hell" or the "promise pyramid of doom."
 
-__**Callback Hell : **__ Having nested callbacks can lead to callback hell, which makes the code hard to understand, maintain, and debug. When working with complex asynchronous programs that need the completion of multiple roles, this issue is very common.
+__Callback Hell : __ Having nested callbacks can lead to callback hell, which makes the code hard to understand, maintain, and debug. When working with complex asynchronous programs that need the completion of multiple roles, this issue is very common.
 <div align="center">
-<img src="./images/callBackHell.png" alt="Alt text" width="200" height="200" >
+<img src="./images/callBackHell.png" alt="Alt text" width="600" height="600" >
 </div>
 
-__**Promise Pyramid : **__ Promises provide a more organized method of managing asynchronous actions, which reduces the problem of callback hell. The `.then()` and `.catch()` methods allow you to connect promises together rather than nesting callbacks. However, the promise chain may become equally difficult to handle as callback hell as the number of asynchronous actions increases.
+__Promise Pyramid : __ Promises provide a more organized method of managing asynchronous actions, which reduces the problem of callback hell. The `.then()` and `.catch()` methods allow you to connect promises together rather than nesting callbacks. However, the promise chain may become equally difficult to handle as callback hell as the number of asynchronous actions increases.
 
 <!-- ```typescript
 // Callback Hell
