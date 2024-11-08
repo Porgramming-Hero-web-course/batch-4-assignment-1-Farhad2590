@@ -9,8 +9,9 @@ class Car {
         this.year = year;
     }
 
-    getCarAge(): number {
+    getCarAge(): string  {
         const currentYear = 2024
-        return currentYear - this.year;
+        const age = currentYear - this.year;
+        return `${age} (assuming current year is ${currentYear})` 
     }
 }
