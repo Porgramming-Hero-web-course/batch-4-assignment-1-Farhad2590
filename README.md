@@ -14,7 +14,7 @@ In JavaScript and TypeScript, callbacks and promises have long been the most com
 **Promise Pyramid :** Promises provide a more organized method of managing asynchronous actions, which reduces the problem of callback hell. The `.then()` and `.catch()` methods allow you to connect promises together rather than nesting callbacks. However, the promise chain may become equally difficult to handle as callback hell as the number of asynchronous actions increases.
 
 <div align="center">
-<img src="./images/promisePyramid.png" alt="Alt text" width="1000" height="400" >
+<img src="./images/promisePyramid.png" alt="Alt text" width="700" height="600" >
 </div>
 
 ### The Power of async/await
@@ -24,7 +24,7 @@ The introduction of the `async/await` syntax in TypeScript (and JavaScript) has 
 Here's an example of how you can use `async/await` to simplify the previous code:
 
 <div align="center">
-<img src="./images/promisePyramid.png" alt="Alt text" width="1000" height="400" >
+<img src="./images/asyncAwaitl.png" alt="Alt text" width="900" height="700" >
 </div>
 
 In this example, the `async/await` syntax allows us to write the asynchronous code in a linear, sequential manner, without the need for complicated promise chains or nested callbacks. The `await` keyword pauses the execution of the function until the asynchronous operation is completed, making the code much more readable and easier to understand.
