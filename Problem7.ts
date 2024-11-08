@@ -10,7 +10,7 @@ class Car {
     }
 
     getCarAge(): string  {
-        const currentYear = 2024
+        const currentYear = new Date().getFullYear();
         const age = currentYear - this.year;
         return `${age} (assuming current year is ${currentYear})` 
     }
